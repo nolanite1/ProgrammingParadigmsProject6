@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+</style>
+</head>
+<title>Sailesh Sirigineedi's page</title>
+<body style="background-color:Tomato;">
+<script type="text/javascript">
+function isCorrect(a){
+  console.log("sdijfojefeij");
+  if(a==1){
+    document.getElementsByClassName("Question1")[0].innerHTML = "Correct";
+  }
+  else if(a==2){
+    document.getElementsByClassName("Question2")[0].innerHTML = "Correct";
+    console.log("Question 2 is correct");
+  }
+  else if(a==3){
+    document.getElementsByClassName("Question3")[0].innerHTML = "Correct";
+  }
+}
+function isIncorrect(a){
+  if(a==1){
+    document.getElementsByClassName("Question1")[0].innerHTML = "Incorrect";
+  }
+  else if(a==2){
+    document.getElementsByClassName("Question2")[0].innerHTML = "Incorrect";
+  }
+  else if(a==3){
+    document.getElementsByClassName("Question3")[0].innerHTML = "Incorrect";
+  }
+}
+function reset(){
+  var x = document.getElementsByClassName("correct");
+  for(i=0;i<x.length;i++){
+    x[i].innerHTML = "";
+  }
+}
+</script>
+<h1>Sailesh Sirigineedi's page</h1>
+<h1>This is a quiz about the state of Arkansas. Here is a link to the wikipedia article on Arkansas: </h1>
+<p><a href="https://en.wikipedia.org/wiki/Arkansas" target="_blank">https://en.wikipedia.org/wiki/Arkansas</a></p>
+<h2>What's Arkansas's capital?</h2>
+<ul> <li onclick="isIncorrect(1)" style="cursor:pointer">Topeka</li>
+     <li onclick="isCorrect(1)" style="cursor:pointer">Little Rock</li>
+     <li onclick="isIncorrect(1)" style="cursor:pointer">Montgomery</li>
+</ul>
+<p class="Question1 correct"></p>
+<h2>Who is Arkansas's governor?</h2>
+<h3>Steve Womack</h3>
+<img src="SteveWomack.jpg" alt="Steve Womack" onclick="isIncorrect(2)" width="400" height="400" style="cursor:pointer"></img>
+<h3>Mike Huckabeee</h3>
+<img src="MikeHuckabee.jpeg" alt="Mike Huckabee" onclick="isIncorrect(2)" width="400" height="400" style="cursor:pointer"></img>
+<h3>Asa Hutchinson</h3>
+<img src="AsaHutchinson.jpg" alt="Asa Hutchinson" onclick="isCorrect(2)" width="400" height="400" style="cursor:pointer"></img>
+<p class="Question2 correct"></p>
+<h2>Who is Arkansas's state representative?</h2>
+<ul> <li onclick="isCorrect(3)" style="cursor:pointer">Steve Womack</li>
+     <li onclick="isIncorrect(3)" style="cursor:pointer">Mike Huckabee</li>
+     <li onclick="isIncorrect(3)" style="cursor:pointer">Tom Cotton</li>
+</ul>
+<p class="Question3 correct"></p>
+<button onclick="reset()">Reset</button>
+</body>
+</html>
